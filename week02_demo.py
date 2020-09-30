@@ -61,3 +61,11 @@ def update_statement(statement, initial_balance, interest_rate):
     return statement, balance
 
 print(update_statement(statement, initial_balance, 0.5))
+
+#Toy example
+example_statement = [[100, 100, 100, -200],
+                     [200, -50],
+                     [350, -100]]
+example_starting_balance = 0
+example_rate = 1
+print(update_statement(example_statement, example_starting_balance, example_rate))
