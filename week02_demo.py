@@ -47,6 +47,7 @@ def update_statement(statement, initial_balance, interest_rate):
     '''
     Update the client's bank statement with interest payment.
     '''
+    #the first month takes initial balance/interest as the balance/interest but then balance/interest overwrites with balance/interest
     balance = initial_balance
     total_interest = 0
 
@@ -54,7 +55,7 @@ def update_statement(statement, initial_balance, interest_rate):
         balance = update_balance(month, balance)
         total_interest = total_interest + calculate_interest(balance, interest_rate)
 
-    statement[-1].append(total_interest)
+    statement[-1].append(total_interest) #we only need to add the interest to the last element in the list (it gets paid into the 6th month)
     balance = balance + total_interest
 
     return statement, balance
