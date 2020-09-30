@@ -31,11 +31,17 @@ print(update_balance(statement[0], initial_balance))
 
 def calculate_interest(balance, interest_rate):
     '''
+    This is a doc string describing what the function does.
     Returns total interest paid for a given balance,
     at rate interest_rate (given in %).
     '''
     interest = 0.01 * interest_rate * balance
     return interest
+
+#Toy example
+example_balance = 100
+example_rate = 2 #ie 2%
+print(calculate_interest(example_balance, example_rate))
 
 def update_statement(statement, initial_balance, interest_rate):
     '''
